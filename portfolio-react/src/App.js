@@ -11,6 +11,7 @@ import NoMatch from "./pages/NoMatch";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import About from './components/About';
+import Contact from './components/Contact';
 import Portfolio from './components/Portfolio';
 import Resume from './components/Resume';
 
@@ -26,7 +27,7 @@ function App() {
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/Portfolio" component={Portfolio} />
           <Route exact path="/resume" component={Resume} />
-          
+
           <Route component={NoMatch} />
         </Switch>
      
