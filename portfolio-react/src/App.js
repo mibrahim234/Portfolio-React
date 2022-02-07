@@ -3,14 +3,16 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
 
-// Components and pages 
+// Pages 
 import Home from "./pages/Home";
+import NoMatch from "./pages/NoMatch";
+
+// Components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import About from './components/About';
-import Projects from './components/projects';
+import Portfolio from './components/Portfolio';
 import Resume from './components/Resume';
-
 
 function App() {
 
@@ -18,16 +20,15 @@ function App() {
     <Router>
     <div className="app">
       <Header />
-        {/* <Switch>
+        <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/signup" component={Signup} />
-          <Route exact path="/profile" component={Profile} />
-          <Route exact path="/companies" component={Companies} />
-          <Route exact path="/developers" component={Developers} />
-
+          <Route exact path="/about" component={About} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/Portfolio" component={Portfolio} />
+          <Route exact path="/resume" component={Resume} />
+          
           <Route component={NoMatch} />
-        </Switch> */}
+        </Switch>
      
       <Footer />
     </div>
