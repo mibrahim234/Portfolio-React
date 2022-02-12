@@ -1,4 +1,5 @@
 .dropdown-menu {
+    background-color: var(--asbestos);
     width: 200px;
     position: absolute;
     top: 80px;
@@ -7,12 +8,12 @@
 }
 
 .dropdown-menu li {
-    background: #188aff;
+    background: #456367;
     cursor: pointer;
 }
 
 .dropdown-menu li:hover {
-    background: #5cbaff;
+    background: #456367;
 }
 
 .dropdown-menu.clicked {
@@ -27,3 +28,9 @@
     color: white;
     padding: 16px; 
 }
+
+@media screen and (max-width: 960px) {
+    .fa-caret-down {
+      display: none;
+    }
+  }

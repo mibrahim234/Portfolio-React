@@ -1,7 +1,6 @@
 // appears on multiple pages
 // header/navbar
 import React, {useState} from 'react';
-import {Button} from './Button';
 import './header.css'; 
 import { Link } from 'react-router-dom';
 import Dropdown from './Dropdown';
@@ -32,8 +31,7 @@ function Header() {
   return (
     <>
     <nav className='navBar'>
-    <Link to="/"
-    className='navbar-logo'>
+    <Link to="/"  className='navbar-logo' onClick={closeMobileMenu}>
       Mohammad Ibrahim
        </Link>
 
@@ -42,36 +40,54 @@ function Header() {
       </div>
 
       <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-        <li className='nav-item'
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-        >
-        <Link to="/" className='nav-links' onClick= {closeMobileMenu}>
-          Home 
-        </Link>
-        </li>
+       
+       {/* HOME */}
+      <li className='nav-item'>
+            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+              Home
+            </Link>
+          </li>
+
+            {/* About Me */}
+          <li
+            className='nav-item'  >
+            <Link
+              to='/about'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+              About Me 
+            </Link>
+          </li>
+
+        {/* Portfolio */}
         <li className='nav-item'>
-        <Link to="/profile" className='nav-links' onClick= {closeMobileMenu}>
-          About <i className= 'fas fa-caret-down' /> 
-        </Link>
-        {dropdown && <Dropdown /> }
-        </li>
-        <li className='nav-item'>
-        <Link to="/contact" className='nav-links' onClick= {closeMobileMenu}>
-          Contact 
-        </Link>
-        </li>
+            <Link
+              to='/portfolio'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+              Portfolio
+            </Link>
+          </li>
+  
+
+          {/* Contact */}
+          <li className='nav-item'>
+            <Link
+              to='/contact'
+              className='nav-links'
+              onClick={closeMobileMenu} >
+              Contact
+            </Link>
+          </li>
+
+      {/* Resume */}
         <li className='nav-item'>
         <Link to="/resume" className='nav-links' onClick= {closeMobileMenu}>
-          Resume 
+          Resume
         </Link>
         </li>
-        <li className='nav-item'>
-        <Link to="/sign-up" className='nav-links-mobile' onClick= {closeMobileMenu}>
-          Sign Up
-        </Link>
-        </li>
-        <Button />
       </ul>
     </nav>    
     </>
