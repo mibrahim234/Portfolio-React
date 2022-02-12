@@ -1,10 +1,10 @@
 :root {
-  --Logodarkgreen: #283c24;
-  --headerfooter: #7d8672;
-  --backgroundbeige: #e6e0d1;
+  --freespeechblue: #34495e;
+  --headerfooter: #95a5a6;
+  --backgroundbeige: #7f8c8d;
   --descriptionhome: #384a33;
-  --boxlinksdarkgreen: #748372;
-  --textinsidebox: #dbdbca;
+  --boxlinksdarkgreen: #ffffff;
+  --textinsidebox: #34495e;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
   --spacing-one: calc(1rem * 0.25);
@@ -80,7 +80,7 @@ h6 {
   font-weight: 700;
   margin: 5px 0;
   line-height: 1.25;
-  color: var(--Logodarkgreen);
+  color: var(--freespeechblue);
 }
 
 h1 {
@@ -337,7 +337,7 @@ option:hover {
 
 .btn1 {
   color: var(--textinsidebox);
-  background-color: var(--Logodarkgreen);
+  background-color: var(--freespeechblue);
   font-size: 30px;
 }
 
