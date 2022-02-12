@@ -13,6 +13,22 @@ function Header() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
+  const onMouseEnter = () => {
+    if(window.innerWidth < 960) {
+      setDropdown(false) 
+    } else {
+      setDropdown(true);
+    }
+  };
+
+  const onMouseLeave = () => {
+    if(window.innerWidth < 960) {
+      setDropdown(false) 
+    } else {
+      setDropdown(false);
+    }
+  };
+
   return (
     <>
     <nav className='navBar'>
@@ -26,7 +42,10 @@ function Header() {
       </div>
 
       <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-        <li className='nav-item'>
+        <li className='nav-item'
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+        >
         <Link to="/" className='nav-links' onClick= {closeMobileMenu}>
           Home 
         </Link>

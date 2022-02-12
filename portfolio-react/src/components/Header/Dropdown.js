@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {MenuItems} from './MenuItems';
-import styles from './header.module.css'; 
+import './Dropdown.css';
 import { Link } from 'react-router-dom';
 import './Dropdown.css';
 
@@ -30,3 +30,5 @@ function Dropdown () {
         </>
     )
 }
+
+export default Dropdown;
