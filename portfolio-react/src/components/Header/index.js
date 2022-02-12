@@ -1,15 +1,17 @@
 // appears on multiple pages
 // header/navbar
 import React, {useState} from 'react';
-// import {Button} from './Button';
-import styles from './header.module.css'; 
+import {Button} from './Button';
+import './header.css'; 
 import { Link } from 'react-router-dom';
-// import Dropdown from './Dropdown';
+import Dropdown from './Dropdown';
 
 function Header() {
   const [click, setClick] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
   const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
   return (
     <>
@@ -22,9 +24,37 @@ function Header() {
       <div className='menu-icon' onClick={handleClick}>
         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
       </div>
-    </nav>
-    
-    
+
+      <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+        <li className='nav-item'>
+        <Link to="/" className='nav-links' onClick= {closeMobileMenu}>
+          Home 
+        </Link>
+        </li>
+        <li className='nav-item'>
+        <Link to="/profile" className='nav-links' onClick= {closeMobileMenu}>
+          About <i className= 'fas fa-caret-down' /> 
+        </Link>
+        {dropdown && <Dropdown /> }
+        </li>
+        <li className='nav-item'>
+        <Link to="/contact" className='nav-links' onClick= {closeMobileMenu}>
+          Contact 
+        </Link>
+        </li>
+        <li className='nav-item'>
+        <Link to="/resume" className='nav-links' onClick= {closeMobileMenu}>
+          Resume 
+        </Link>
+        </li>
+        <li className='nav-item'>
+        <Link to="/sign-up" className='nav-links-mobile' onClick= {closeMobileMenu}>
+          Sign Up
+        </Link>
+        </li>
+        <Button />
+      </ul>
+    </nav>    
     </>
   )
 }
