@@ -1,8 +1,8 @@
 :root {
   --freespeechblue: #34495e;
   --headerfooter: #95a5a6;
-  --backgroundbeige: #7f8c8d;
-  --descriptionhome: #384a33;
+  --backgroundbeige: #95a5a6;
+  --descriptionhome: #95a5a6;
   --boxlinksdarkgreen: #ffffff;
   --textinsidebox: #34495e;
   --error: rgb(228, 46, 1);
@@ -302,7 +302,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 }
 
 .title1:hover {
-  background-color: var(--textinsidebox);
+  background-color: var(--boxlinksdarkgreen);
 }
  /* Change all h1 font family */
 h1 {
@@ -331,13 +331,13 @@ option:hover {
 /* Button Styles for all buttons */
 .btn {
   color: var(--Logodarkgreen);
-  background-color: var(--textinsidebox);
+  background-color: var(--freespeechblue);
   font-size: 25px;
 }
 
 .btn1 {
   color: var(--textinsidebox);
-  background-color: var(--freespeechblue);
+  background-color: var(--boxlinksdarkgreen);
   font-size: 30px;
 }
 
