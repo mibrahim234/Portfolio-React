@@ -5,8 +5,8 @@ function About() {
 
   return (
     <section className="my-5" >
-      <h1 id="about">About Me</h1>
-      <img src={coverImage} className="my-2" style={{ width: "100%" }} alt="cover" />
+      {/* <h1 id="about">About Me</h1> */}
+      <img src={coverImage} className="my-2" style={{ width: "50%" }} alt="cover" />
       <div className="my-2">
       <p> Hi, I’m Mohammad Ibrahim. Welcome to my portfolio site! </p>
                             <p> Born and raised in New York City, I was exposed to many different cultures and unique ways of living life. Growing up here gave me the goal to travel the world. I want to see the beauties of the earth and experience different ways of living life. </p>
